@@ -7,7 +7,7 @@ def test_main_form(driver):
     page = MainFormPage(driver)
 
 # Tests and navigates through home screen to form page
-    page.login("ffp@j938")
+    page.login("")
     page.get_home_page()
     page.click_goto_button()
 # List of getters to check on the form page
@@ -148,4 +148,5 @@ def test_main_form(driver):
 
     for i, exp_values in enumerate(all_data, start=1):
         for j, value in enumerate(exp_values, start=1):
+
             assert value, f"Experience {i} field {j} is empty"
